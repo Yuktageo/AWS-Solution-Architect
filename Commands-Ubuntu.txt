@@ -1,9 +1,39 @@
-login to the machine
+-login to the machine
 
 ssh cloud_user@ipadress -i (if you have any key pair)
 
 
-update the repositories and install the same and use -y at the end so that it doesnot need to ask for the permission all the time
+-update the repositories and install the same and use -y at the end so that it doesnot need to ask for the permission all the time
 
 sudo apt-get update && sudo apt-get upgrade -y
+
+-for installing the apace server
+
+sudo apt-get install apache2 -y
+
+-for installing the aws cli you first need to install the unzip 
+
+sudo apt-get install unzip -y
+
+-command for installing aws cli
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
+-now unzip the file
+
+unzip awscliv2.zip
+
+
+-install aws cli 
+
+sudo ./aws/install
+
+-give permission to the user to make chanes in the file
+
+sudo chmod 777 /var/www/html/index.html
+
+-
+
+
+
 
