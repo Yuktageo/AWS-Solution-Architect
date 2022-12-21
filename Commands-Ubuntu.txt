@@ -11,6 +11,10 @@ sudo apt-get update && sudo apt-get upgrade -y
 
 sudo apt-get install apache2 -y
 
+-inorder to enable apache-2
+
+sudo systemctl enable apache-2
+
 -for installing the aws cli you first need to install the unzip 
 
 sudo apt-get install unzip -y
@@ -28,11 +32,32 @@ unzip awscliv2.zip
 
 sudo ./aws/install
 
--give permission to the user to make chanes in the file
+-give permission to the user to make changes in the file
 
 sudo chmod 777 /var/www/html/index.html
 
--
+-echo '<html><h1>BootStrap Example</h1><h3>Availability Zone:' > /var/www/html/index.html
+-curl http://169.254.269.254/latest/meta-data/placement/availability-zone
+
+
+-install mysql server
+
+sudo apt-get mysql-server -y
+
+-to enable
+
+sudo systemctl enable mysql
+
+-inorder to check the status of apache2 server 
+
+sudo systemctl status apache2
+
+-to monitor apache2 server
+
+ps aux|grep apache2
+
+
+
 
 
 
