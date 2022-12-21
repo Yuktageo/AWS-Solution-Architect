@@ -1,0 +1,9 @@
+login to the machine
+
+ssh cloud_user@ipadress -i (if you have any key pair)
+
+
+update the repositories and install the same and use -y at the end so that it doesnot need to ask for the permission all the time
+
+sudo apt-get update && sudo apt-get upgrade -y
+
